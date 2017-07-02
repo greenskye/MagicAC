@@ -1,0 +1,3 @@
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\MagicAC\Source\MagicAC\MagicAC\obj\Debug\MagicAC.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\MagicAC\Assemblies\MagicAC.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\MagicAC\Source\MagicAC\MagicAC\obj\Debug\MagicAC.dll

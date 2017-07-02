@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MagicAC</defName>
+    <label>magicac</label>
+    <thingClass>MagicAC.Building_MagicAC</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TempControl/Heater</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <color>(102,102,102)</color>
+      <shadowData>
+        <volume>(0.25,0.4,0.7)</volume>
+        <offset>(0,0,-0.1)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.234375,0,0.515625,0.984375)</rect>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <pathCost>40</pathCost>
+    <blockWind>true</blockWind>
+    <rotatable>false</rotatable>
+    <fillPercent>0.4</fillPercent>
+    <statBases>
+      <WorkToBuild>1000</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>6</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <description>An electrical device that converts electricity into heat. It can automatically turn itself on or off to reach a specific target temperature.</description>
+    <costList>
+      <Steel>65</Steel>
+      <Component>1</Component>
+    </costList>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <startElectricalFires>true</startElectricalFires>
+        <basePowerConsumption>500</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_TempControl">
+        <energyPerSecond>21</energyPerSecond>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(255,150,100,0)</glowColor>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <designationCategory>Temperature</designationCategory>
+    <researchPrerequisites>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>
