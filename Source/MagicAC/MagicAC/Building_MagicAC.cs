@@ -8,7 +8,7 @@ using Verse;
 
 namespace MagicAC
 {
-    public class Building_MagicAC : Building_TempControl
+    public class Building_MagicAC : Building_TempControl, IWallAttachable
     {
         private const float EfficiencyFalloffSpan = 100f;
 

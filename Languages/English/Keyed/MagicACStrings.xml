@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- MagicACWall -->
+	<MagicAC_WallAlreadyOccupied>Wall already occupied</MagicAC_WallAlreadyOccupied>
+	<MagicAC_NeedsWall>Can only be placed on a wall</MagicAC_NeedsWall>
+</LanguageData>

@@ -2,7 +2,7 @@
 <Defs>
   <ThingDef ParentName="BuildingBase">
     <defName>MagicAC</defName>
-    <label>magicac</label>
+    <label>MagicAC</label>
     <thingClass>MagicAC.Building_MagicAC</thingClass>
     <graphicData>
       <texPath>Things/Building/Misc/TempControl/Heater</texPath>
@@ -65,4 +65,54 @@
       <li>Electricity</li>
     </researchPrerequisites>
   </ThingDef>
+  
+  <ThingDef ParentName="BuildingBase">
+	<defName>MagicACWall</defName>
+	<thingClass>MagicAC.Building_MagicACWall</thingClass>
+	<label>MagicAC Wall Unit</label>
+	<description>A wall mounted combination heater and cooler. It can automatically turn itself on or off to reach a specific target temperature.</description>
+	<graphicData>
+		<texPath>Things/Building/MagicAC/MagicACWall</texPath>
+		<graphicClass>Graphic_Multi</graphicClass>
+	</graphicData>
+	<costList>
+		<Steel>170</Steel>
+		<Component>3</Component>
+	</costList>
+	<building>
+		<isEdifice>false</isEdifice>
+	</building>
+	<statBases>
+		<WorkToBuild>1400</WorkToBuild>
+		<MaxHitPoints>30</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+	</statBases>
+	<comps>
+		<li Class="CompProperties_Power">
+			<compClass>CompPowerTrader</compClass>
+			<soundPowerOn>PowerOnSmall</soundPowerOn>
+			<soundPowerOff>PowerOffSmall</soundPowerOff>
+			<basePowerConsumption>200</basePowerConsumption>
+		</li>
+		<li Class="CompProperties_Flickable"/>
+		<li Class="CompProperties_TempControl">
+			<compClass>CompTempControl</compClass>
+			<energyPerSecond>50</energyPerSecond>
+		</li>
+		<li Class="CompProperties_Breakdownable"/>
+	</comps>
+	<placeWorkers>
+		<li>MagicAC.PlaceWorker_MagicACWall</li>
+		<li>MagicAC.PlaceWorker_WallObject</li>
+		<li>MagicAC.PlaceWorker_WallChecker</li>
+	</placeWorkers>
+	<altitudeLayer>PawnUnused</altitudeLayer>
+	<castEdgeShadows>false</castEdgeShadows>
+	<designationCategory>Temperature</designationCategory>
+	<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+	<tickerType>Rare</tickerType>
+	<researchPrerequisites>
+		<li>Electricity</li>
+	</researchPrerequisites>
+</ThingDef>
 </Defs>

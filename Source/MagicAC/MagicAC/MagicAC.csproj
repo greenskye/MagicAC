@@ -47,7 +47,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MagicAC.cs" />
+    <Compile Include="Building_MagicACWall.cs" />
+    <Compile Include="Building_MagicAC.cs" />
+    <Compile Include="PlaceWorker_WallObject.cs" />
+    <Compile Include="IWallAttachable.cs" />
+    <Compile Include="PlaceWorker_MagickACWall.cs" />
+    <Compile Include="PlaceWorker_WallChecker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
